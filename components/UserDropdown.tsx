@@ -14,6 +14,7 @@ import {Button} from "@/components/ui/button";
 import {LogOut} from "lucide-react";
 import NavItems from "@/components/NavItems";
 import {signOut} from "@/lib/actions/auth.actions";
+import Link from "next/link";
 
 const UserDropdown = ({user, initialStocks}: { user: User, initialStocks: StockWithWatchlistStatus[] }) => {
     const router = useRouter();
@@ -58,6 +59,11 @@ const UserDropdown = ({user, initialStocks}: { user: User, initialStocks: StockW
                     </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-gray-600"/>
+                <Link href="/watchlist">
+                    <DropdownMenuItem className="text-gray-100 text-md font-medium focus:bg-transparent focus:text-yellow-500 transition-colors cursor-pointer">
+                        Watchlist
+                    </DropdownMenuItem>
+                </Link>
                 <DropdownMenuItem onClick={handleSignOut}
                                   className="text-gray-100 text-md font-medium focus:bg-transparent focus:text-yellow-500 transition-colors cursor-pointer">
                     <LogOut className="h-4 w-4 mr-2 hidden sm:block"/>

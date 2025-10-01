@@ -2,11 +2,11 @@
 
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
-import InputFiled from "@/components/forms/InputFiled";
+import InputField from '@/components/forms/InputField';
 import FooterLink from '@/components/forms/FooterLink';
-// import {signInWithE, signUpWithEmail} from "@/lib/actions/auth.actions";
-// import {toast} from "sonner";
-// import {signInEmail} from "better-auth/api";
+import {signInWithEmail, signUpWithEmail} from "@/lib/actions/auth.actions";
+import {toast} from "sonner";
+import {signInEmail} from "better-auth/api";
 import {useRouter} from "next/navigation";
 
 const SignIn = () => {
@@ -40,16 +40,16 @@ const SignIn = () => {
             <h1 className="form-title">Welcome back</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                <InputFiled
+                <InputField
                     name="email"
                     label="Email"
-                    placeholder="contact@jsmastery.com"
+                    placeholder="stockapp@gmail.com"
                     register={register}
                     error={errors.email}
-                    validation={{required: 'Email is required', pattern: /^\w+@\w+\.\w+$/}}
+                    validation={{required: 'Email is required'}}
                 />
 
-                <InputFiled
+                <InputField
                     name="password"
                     label="Password"
                     placeholder="Enter your password"

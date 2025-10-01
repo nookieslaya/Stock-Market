@@ -114,6 +114,7 @@ export const HEATMAP_WIDGET_CONFIG = {
     height: '600',
 };
 
+
 export const TOP_STORIES_WIDGET_CONFIG = {
     displayMode: 'regular',
     feedMode: 'market',
@@ -125,6 +126,16 @@ export const TOP_STORIES_WIDGET_CONFIG = {
     height: '600',
 };
 
+export const TOP_CRYPTO_WIDGET_CONFIG = {
+    displayMode: 'regular',
+    feedMode: 'market',
+    colorTheme: 'dark',
+    isTransparent: true,
+    locale: 'en',
+    market: 'stock',
+    width: '100%',
+    height: '600',
+};
 export const MARKET_DATA_WIDGET_CONFIG = {
     title: 'Stocks',
     width: '100%',
